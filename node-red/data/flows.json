@@ -1,0 +1,1552 @@
+[
+    {
+        "id": "51ea9c70bb53699f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b996b4ad693ff921",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "6f01ef48d8dab901",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "6e51d2d89df3c1d6",
+        "type": "mqtt-broker",
+        "name": "EMQX Public Broker",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7ccf4a973ce23fbf",
+        "type": "ui-page",
+        "name": "Smart Classroom",
+        "ui": "b996b4ad693ff921",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6f01ef48d8dab901",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "85fdcba7528a0077",
+        "type": "ui-group",
+        "name": "Status",
+        "page": "7ccf4a973ce23fbf",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "be06dcde817b07ca",
+        "type": "ui-group",
+        "name": "Controls",
+        "page": "7ccf4a973ce23fbf",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "a26e1f3bdbd3c5af",
+        "type": "ui-group",
+        "name": "Analytics",
+        "page": "7ccf4a973ce23fbf",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0c4dc126c305f01e",
+        "type": "ui-group",
+        "name": "ML",
+        "page": "7ccf4a973ce23fbf",
+        "width": 6,
+        "height": 1,
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d21119f78a2060de",
+        "type": "ui-group",
+        "name": "AI",
+        "page": "7ccf4a973ce23fbf",
+        "width": 6,
+        "height": 1,
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "f572427691d0b2c2",
+        "type": "mqtt in",
+        "z": "51ea9c70bb53699f",
+        "name": "",
+        "topic": "smartclass/demo01/telemetry",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "6e51d2d89df3c1d6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "f25a7af7e1627b3c"
+            ]
+        ]
+    },
+    {
+        "id": "f25a7af7e1627b3c",
+        "type": "json",
+        "z": "51ea9c70bb53699f",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "5984f54ff4df2ec9"
+            ]
+        ]
+    },
+    {
+        "id": "5984f54ff4df2ec9",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Enrich Telemetry",
+        "func": "let d = msg.payload;\n\nd.roomStatus = d.occupied ? \"Occupied\" : \"Empty\";\nd.lightStatus = d.light ? \"ON\" : \"OFF\";\nd.fanStatus = d.fan ? \"ON\" : \"OFF\";\nd.modeText = d.mode ? d.mode.toUpperCase() : \"UNKNOWN\";\nd.collegeText = d.forceOff ? \"Outside college hours\" : \"Within college hours\";\n\nif (d.afterHoursAlert && d.motion) {\n    d.alertText = \"ALERT: Motion detected after college hours\";\n} else if (d.afterHoursAlert) {\n    d.alertText = \"After-hours monitoring active\";\n} else if (d.temperature >= 35) {\n    d.alertText = \"WARNING: High temperature emergency\";\n} else {\n    d.alertText = \"Normal\";\n}\n\nmsg.payload = d;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 120,
+        "wires": [
+            [
+                "802a5b24d6de93ab",
+                "cbf0c9df97eca069",
+                "1217929d53d45ff8",
+                "0be06d21f02e4872",
+                "d79ba0739ca62910",
+                "01ede4658b1c35e9",
+                "7d8ea3f94c1e9a02",
+                "a956419bf926d1af",
+                "187bcb464caa869b",
+                "c3b18bd14e59a0e8",
+                "e8d9bce2af5cdab0",
+                "ec9800cbd5cad990",
+                "bcfef89dfcc78679",
+                "79ca6ac5c19b654e"
+            ]
+        ]
+    },
+    {
+        "id": "802a5b24d6de93ab",
+        "type": "debug",
+        "z": "51ea9c70bb53699f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cbf0c9df97eca069",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Temperature Extractor",
+        "func": "msg.payload = msg.payload.temperature;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            [
+                "ee86a34384436871"
+            ]
+        ]
+    },
+    {
+        "id": "ee86a34384436871",
+        "type": "ui-gauge",
+        "z": "51ea9c70bb53699f",
+        "name": "Temperature",
+        "group": "85fdcba7528a0077",
+        "order": 7,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Temperature",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "°C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1250,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1217929d53d45ff8",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Room Status",
+        "func": "msg.payload = msg.payload.roomStatus;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "96aee335b4d58c5b"
+            ]
+        ]
+    },
+    {
+        "id": "96aee335b4d58c5b",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Room Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1270,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "0be06d21f02e4872",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Light Status",
+        "func": "msg.payload = msg.payload.lightStatus;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 420,
+        "wires": [
+            [
+                "484684d8add024df"
+            ]
+        ]
+    },
+    {
+        "id": "484684d8add024df",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1290,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d79ba0739ca62910",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Fan Status",
+        "func": "msg.payload = msg.payload.fanStatus;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 500,
+        "wires": [
+            [
+                "196effb0e6019533"
+            ]
+        ]
+    },
+    {
+        "id": "196effb0e6019533",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fan",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1250,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "01ede4658b1c35e9",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Mode",
+        "func": "msg.payload = msg.payload.modeText;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "fcc881f73cd8f122"
+            ]
+        ]
+    },
+    {
+        "id": "fcc881f73cd8f122",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7d8ea3f94c1e9a02",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "College Hours",
+        "func": "msg.payload = msg.payload.collegeText;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 660,
+        "wires": [
+            [
+                "eb161bf82b9d4028"
+            ]
+        ]
+    },
+    {
+        "id": "eb161bf82b9d4028",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "College Hours",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1280,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a956419bf926d1af",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Alerts",
+        "func": "msg.payload = msg.payload.alertText;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 740,
+        "wires": [
+            [
+                "4f5aa1f9fe2e99e3"
+            ]
+        ]
+    },
+    {
+        "id": "4f5aa1f9fe2e99e3",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Alerts",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1170,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "187bcb464caa869b",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Temperature Trend",
+        "func": "msg.payload = msg.payload.temperature;\nmsg.topic = \"Temperature\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 820,
+        "wires": [
+            [
+                "64c9baaf5b6e066e"
+            ]
+        ]
+    },
+    {
+        "id": "64c9baaf5b6e066e",
+        "type": "ui-chart",
+        "z": "51ea9c70bb53699f",
+        "group": "85fdcba7528a0077",
+        "name": "",
+        "label": "Temperature Trend",
+        "order": 8,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1230,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1115c0a1bb20b4ed",
+        "type": "mqtt out",
+        "z": "51ea9c70bb53699f",
+        "name": "",
+        "topic": "smartclass/demo01/command",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6e51d2d89df3c1d6",
+        "x": 1730,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "cec76d2d518d174f",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "AUTO",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 290,
+        "y": 1000,
+        "wires": [
+            [
+                "76d95cf103dd7b93"
+            ]
+        ]
+    },
+    {
+        "id": "76d95cf103dd7b93",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "AUTO Command",
+        "func": "msg.payload = JSON.stringify({\n  mode: \"auto\",\n  forceOff: false\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1000,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "889b2381362f01cb",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "Manual Light ON",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 250,
+        "y": 1080,
+        "wires": [
+            [
+                "da8095523ec49a3e"
+            ]
+        ]
+    },
+    {
+        "id": "959d603ecbba36f3",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "Manual Light OFF",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 250,
+        "y": 1160,
+        "wires": [
+            [
+                "f7974205846c02bd"
+            ]
+        ]
+    },
+    {
+        "id": "b22ac59a416bbe50",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "Manual Fan ON",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 260,
+        "y": 1240,
+        "wires": [
+            [
+                "293dc3a57fc39520"
+            ]
+        ]
+    },
+    {
+        "id": "c57cb5f646e030a2",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "Manual Fan OFF",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 250,
+        "y": 1320,
+        "wires": [
+            [
+                "e5e099389ca1de44"
+            ]
+        ]
+    },
+    {
+        "id": "da8095523ec49a3e",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Manual Light ON",
+        "func": "msg.payload = JSON.stringify({\n    mode: \"manual\",\n    light: true\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "f7974205846c02bd",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Manual Light OFF",
+        "func": "msg.payload = JSON.stringify({\n    mode: \"manual\",\n    light: false\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1160,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "293dc3a57fc39520",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Manual Fan ON",
+        "func": "msg.payload = JSON.stringify({\n    mode: \"manual\",\n    fan: true\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1240,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "e5e099389ca1de44",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Manual Fan OFF",
+        "func": "msg.payload = JSON.stringify({\n    mode: \"manual\",\n    fan: false\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1320,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "1fca013a0f843273",
+        "type": "ui-dropdown",
+        "z": "51ea9c70bb53699f",
+        "group": "be06dcde817b07ca",
+        "name": "",
+        "label": "Preset Mode",
+        "tooltip": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "Lecture Mode",
+                "value": "lecture",
+                "type": "str"
+            },
+            {
+                "label": "Exam Mode",
+                "value": "exam",
+                "type": "str"
+            },
+            {
+                "label": "Energy Saver Mode",
+                "value": "energy",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 250,
+        "y": 1400,
+        "wires": [
+            [
+                "8d1ded871345ac4f"
+            ]
+        ]
+    },
+    {
+        "id": "8d1ded871345ac4f",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Preset Mode",
+        "func": "let preset = msg.payload;\n\nif (preset === \"lecture\") {\n    msg.payload = JSON.stringify({\n        mode: \"auto\",\n        tempThreshold: 28.0\n    });\n} else if (preset === \"exam\") {\n    msg.payload = JSON.stringify({\n        mode: \"auto\",\n        tempThreshold: 26.0\n    });\n} else if (preset === \"energy\") {\n    msg.payload = JSON.stringify({\n        mode: \"auto\",\n        tempThreshold: 30.0\n    });\n} else {\n    return null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1400,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "58daabbd88f908cb",
+        "type": "inject",
+        "z": "51ea9c70bb53699f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 1480,
+        "wires": [
+            [
+                "970efc174b7a905b"
+            ]
+        ]
+    },
+    {
+        "id": "970efc174b7a905b",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Schedule Checker",
+        "func": "// Example college hours: 8:00 AM to 6:00 PM\nlet now = new Date();\nlet hour = now.getHours();\n\nlet inCollegeHours = (hour >= 8 && hour < 18);\n\nif (inCollegeHours) {\n    msg.payload = JSON.stringify({\n        forceOff: false,\n        afterHoursAlert: false\n    });\n} else {\n    msg.payload = JSON.stringify({\n        forceOff: true,\n        afterHoursAlert: true\n    });\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1480,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "c3b18bd14e59a0e8",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Occupancy Timer",
+        "func": "let d = msg.payload;\n\nlet wasOccupied = context.get(\"wasOccupied\") || false;\nlet occupiedStart = context.get(\"occupiedStart\") || null;\n\nif (d.occupied && !wasOccupied) {\n    occupiedStart = Date.now();\n}\n\nif (!d.occupied) {\n    occupiedStart = null;\n}\n\ncontext.set(\"wasOccupied\", d.occupied);\ncontext.set(\"occupiedStart\", occupiedStart);\n\nif (occupiedStart) {\n    let totalSeconds = Math.floor((Date.now() - occupiedStart) / 1000);\n    let mins = Math.floor(totalSeconds / 60);\n    let secs = totalSeconds % 60;\n    msg.payload = mins + \" min \" + secs + \" sec\";\n} else {\n    msg.payload = \"0 min 0 sec\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "41f7f4d82909d1ed"
+            ]
+        ]
+    },
+    {
+        "id": "41f7f4d82909d1ed",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "a26e1f3bdbd3c5af",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Occupancy Timer",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 550,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e8d9bce2af5cdab0",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Occupancy Sessions",
+        "func": "let d = msg.payload;\n\nlet wasOccupied = context.get(\"wasOccupied\") || false;\nlet occupiedStart = context.get(\"occupiedStart\") || null;\nlet sessions = context.get(\"sessions\") || [];\nlet sessionCount = context.get(\"sessionCount\") || 0;\n\nif (d.occupied && !wasOccupied) {\n    occupiedStart = Date.now();\n}\n\nif (!d.occupied && wasOccupied && occupiedStart) {\n    let durationSeconds = Math.floor((Date.now() - occupiedStart) / 1000);\n    let mins = Math.floor(durationSeconds / 60);\n    let secs = durationSeconds % 60;\n\n    sessionCount += 1;\n    sessions.unshift(`Occupancy Session ${sessionCount}: ${mins} min ${secs} sec`);\n\n    if (sessions.length > 10) {\n        sessions = sessions.slice(0, 10);\n    }\n\n    occupiedStart = null;\n}\n\ncontext.set(\"wasOccupied\", d.occupied);\ncontext.set(\"occupiedStart\", occupiedStart);\ncontext.set(\"sessions\", sessions);\ncontext.set(\"sessionCount\", sessionCount);\n\nmsg.payload = sessions;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "585aecca9b12b409"
+            ]
+        ]
+    },
+    {
+        "id": "585aecca9b12b409",
+        "type": "ui-template",
+        "z": "51ea9c70bb53699f",
+        "group": "a26e1f3bdbd3c5af",
+        "page": "",
+        "ui": "",
+        "name": "Occupancy Sessions",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"padding:8px;\">\n    <div v-if=\"!msg.payload || msg.payload.length === 0\">\n      No completed sessions yet\n    </div>\n\n    <ul v-else style=\"margin:0; padding-left:20px;\">\n      <li v-for=\"(item, index) in msg.payload\" :key=\"index\">\n        {{ item }}\n      </li>\n    </ul>\n  </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec9800cbd5cad990",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Estimated Energy Saved",
+        "func": "let d = msg.payload;\n\nlet lightWatts = 15;\nlet fanWatts = 60;\n\nlet lastTs = context.get(\"lastTs\") || Date.now();\nlet savedWh = context.get(\"savedWh\") || 0;\n\nlet now = Date.now();\nlet dtHours = (now - lastTs) / 3600000;\n\nif (!d.light) {\n    savedWh += lightWatts * dtHours;\n}\n\nif (!d.fan) {\n    savedWh += fanWatts * dtHours;\n}\n\ncontext.set(\"lastTs\", now);\ncontext.set(\"savedWh\", savedWh);\n\nmsg.payload = savedWh.toFixed(2) + \" Wh\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 440,
+        "wires": [
+            [
+                "0f690a1e7f1ba00b"
+            ]
+        ]
+    },
+    {
+        "id": "0f690a1e7f1ba00b",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "a26e1f3bdbd3c5af",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Estimated Energy Saved",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 570,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bcfef89dfcc78679",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "High Temp Warning",
+        "func": "if (msg.payload.temperature >= 42) {\n    msg.payload = \"EMERGENCY: Classroom temperature is critically high\";\n} else {\n    msg.payload = \"No critical temperature alert\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "cdd531aec1abdc40"
+            ]
+        ]
+    },
+    {
+        "id": "cdd531aec1abdc40",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "a26e1f3bdbd3c5af",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "High Temp Warning",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 550,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "79ca6ac5c19b654e",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "ML Predictor",
+        "func": "\nlet d = msg.payload || {};\nlet now = Date.now();\n\nif (typeof d.temperature !== \"number\" || isNaN(d.temperature) || d.temperature === -999) {\n    return [{ payload: \"ML waiting for valid temperature...\" }, null];\n}\n\nlet model = context.get(\"model\") || {\n    history: [],\n    ema: null,\n    forecasts: [],\n    errors: [],\n    lastAssistAt: 0,\n    lastForecastAt: 0\n};\n\n// 1) Evaluate older forecasts whose due time has arrived\nlet dueForecasts = model.forecasts.filter(f => now >= f.due);\nfor (let f of dueForecasts) {\n    model.errors.push(Math.abs(d.temperature - f.pred));\n}\nif (model.errors.length > 20) {\n    model.errors = model.errors.slice(-20);\n}\nmodel.forecasts = model.forecasts.filter(f => now < f.due);\n\n// 2) Update rolling history\nmodel.history.push({\n    t: now,\n    temp: d.temperature,\n    occupied: !!d.occupied,\n    light: Number(d.light || 0),\n    fan: Number(d.fan || 0)\n});\nif (model.history.length > 60) {\n    model.history = model.history.slice(-60);\n}\n\n// 3) Exponential moving average\nif (model.ema === null) model.ema = d.temperature;\nmodel.ema = 0.35 * d.temperature + 0.65 * model.ema;\n\n// 4) Trend model using last 12 points\nlet points = model.history.slice(-12);\nlet ready = points.length >= 6;\nlet trendPred = d.temperature;\nlet slopePerMin = 0;\nlet residualStd = 999;\nlet confidence = 0.25;\n\nif (ready) {\n    let t0 = points[0].t;\n    let n = points.length;\n    let sumx = 0, sumy = 0, sumxy = 0, sumxx = 0;\n\n    for (let p of points) {\n        let x = (p.t - t0) / 60000.0;   // minutes\n        let y = p.temp;\n        sumx += x;\n        sumy += y;\n        sumxy += x * y;\n        sumxx += x * x;\n    }\n\n    let denom = n * sumxx - sumx * sumx;\n    let slope = 0;\n    let intercept = d.temperature;\n\n    if (denom !== 0) {\n        slope = (n * sumxy - sumx * sumy) / denom;\n        intercept = (sumy - slope * sumx) / n;\n    }\n\n    slopePerMin = slope;\n\n    let futureX = ((now + 120000) - t0) / 60000.0;   // 2 minutes ahead\n    trendPred = intercept + slope * futureX;\n\n    let rss = 0;\n    for (let p of points) {\n        let x = (p.t - t0) / 60000.0;\n        let yhat = intercept + slope * x;\n        rss += Math.pow(p.temp - yhat, 2);\n    }\n    residualStd = Math.sqrt(rss / Math.max(1, n - 2));\n\n    let confN = Math.min(1, n / 12);\n    let confFit = 1 / (1 + residualStd);\n    confidence = Math.max(0, Math.min(1, 0.45 * confN + 0.55 * confFit));\n}\n\n// 5) Small feature adjustments\nlet occBoost = d.occupied ? 0.20 : -0.10;\nlet lightBoost = Number(d.light || 0) > 0 ? 0.10 : 0;\nlet fanEffect = Number(d.fan || 0) > 0 ? -0.20 : 0;\n\nlet predicted = 0.60 * trendPred + 0.40 * model.ema + occBoost + lightBoost + fanEffect;\n\n// Clamp unrealistic jumps\npredicted = Math.max(d.temperature - 1.5, Math.min(d.temperature + 3.0, predicted));\npredicted = Number(predicted.toFixed(1));\n\nlet threshold = Number(d.tempThreshold || 28);\nlet stable = Math.abs(slopePerMin) < 0.08;\nlet anomaly = Number(d.fan || 0) > 0 && slopePerMin > 0.12;\n\nlet assist =\n    ready &&\n    !!d.occupied &&\n    !d.forceOff &&\n    confidence >= 0.55 &&\n    predicted > (threshold + 0.3);\n\n// Cooldown so it does not spam commands\nlet cooldownOk = (now - model.lastAssistAt) > 180000;\nif (!cooldownOk) assist = false;\nif (assist) model.lastAssistAt = now;\n\n// Save one forecast every 15s for later accuracy checking\nif (ready && (now - model.lastForecastAt > 15000)) {\n    model.forecasts.push({ due: now + 120000, pred: predicted });\n    if (model.forecasts.length > 20) {\n        model.forecasts = model.forecasts.slice(-20);\n    }\n    model.lastForecastAt = now;\n}\n\nlet mae = null;\nif (model.errors.length) {\n    let total = model.errors.reduce((a, b) => a + b, 0);\n    mae = Number((total / model.errors.length).toFixed(2));\n}\n\ncontext.set(\"model\", model);\n\nlet statusText = assist\n    ? \"Pre-cooling suggested\"\n    : (anomaly ? \"Possible cooling inefficiency\" : (stable ? \"Stable\" : \"Monitoring\"));\n\nlet uiMsg = {\n    payload:\n        \"<b>2-min forecast:</b> \" + predicted + \" °C\" +\n        \"<br><b>Trend:</b> \" + (slopePerMin >= 0 ? \"+\" : \"\") + slopePerMin.toFixed(2) + \" °C/min\" +\n        \"<br><b>Confidence:</b> \" + Math.round(confidence * 100) + \"%\" +\n        (mae !== null ? \"<br><b>Model error (MAE):</b> \" + mae + \" °C\" : \"\") +\n        \"<br><b>Status:</b> \" + statusText,\n    forecast: {\n        predictedTemp: predicted,\n        slopePerMin: Number(slopePerMin.toFixed(2)),\n        confidence: Number(confidence.toFixed(2)),\n        mae: mae,\n        anomaly: anomaly,\n        assist: assist\n    }\n};\n\nlet controlMsg = null;\nif (assist) {\n    controlMsg = {\n        payload: {\n            assist: true,\n            predictedTemp: predicted,\n            confidence: Number(confidence.toFixed(2)),\n            suggestedThreshold: 26.5,\n            reason: \"Predicted temperature is above threshold soon while room is occupied\"\n        }\n    };\n}\n\nreturn [uiMsg, controlMsg];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 120,
+        "wires": [
+            [
+                "e79a176961e18050",
+                "f61614db00387ea2",
+                "f16e4b82a084e86d"
+            ],
+            [
+                "ca3bd8bf1a9277c0"
+            ]
+        ]
+    },
+    {
+        "id": "e79a176961e18050",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "0c4dc126c305f01e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Predictive Cooling",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1650,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ca3bd8bf1a9277c0",
+        "type": "switch",
+        "z": "51ea9c70bb53699f",
+        "name": "ML Assist Switch",
+        "property": "payload.assist",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1650,
+        "y": 160,
+        "wires": [
+            [
+                "8f79ef83e038762e"
+            ]
+        ]
+    },
+    {
+        "id": "8f79ef83e038762e",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "ML Assist Command",
+        "func": "msg.payload = JSON.stringify({\n    mode: \"auto\",\n    tempThreshold: 26.5\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 160,
+        "wires": [
+            [
+                "1115c0a1bb20b4ed"
+            ]
+        ]
+    },
+    {
+        "id": "b63f47ab648da08c",
+        "type": "ui-text",
+        "z": "51ea9c70bb53699f",
+        "group": "d21119f78a2060de",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AI Summary",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1290,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "81112387a2a73c56",
+        "type": "ui-button",
+        "z": "51ea9c70bb53699f",
+        "group": "d21119f78a2060de",
+        "name": "",
+        "label": "Generate AI Report",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1510,
+        "y": 1360,
+        "wires": [
+            [
+                "644b47231c50b163"
+            ]
+        ]
+    },
+    {
+        "id": "644b47231c50b163",
+        "type": "debug",
+        "z": "51ea9c70bb53699f",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "f61614db00387ea2",
+        "type": "switch",
+        "z": "51ea9c70bb53699f",
+        "name": "Anomaly Switch",
+        "property": "forecast.anomaly",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 260,
+        "wires": [
+            [
+                "3964de44bb0a68ef"
+            ]
+        ]
+    },
+    {
+        "id": "3964de44bb0a68ef",
+        "type": "function",
+        "z": "51ea9c70bb53699f",
+        "name": "Anomaly Alert Formatter",
+        "func": "let last = context.get(\"lastPopup\") || 0;\nlet now = Date.now();\n\nif (now - last < 30000) {\n    return null;\n}\n\ncontext.set(\"lastPopup\", now);\nmsg.payload = \"Cooling inefficiency detected: fan is active but room temperature is still rising.\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1830,
+        "y": 260,
+        "wires": [
+            [
+                "f5e3a123014adf3d"
+            ]
+        ]
+    },
+    {
+        "id": "f5e3a123014adf3d",
+        "type": "ui-notification",
+        "z": "51ea9c70bb53699f",
+        "ui": "b996b4ad693ff921",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "ML Popup",
+        "x": 2040,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f16e4b82a084e86d",
+        "type": "debug",
+        "z": "51ea9c70bb53699f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "forecast",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 360,
+        "wires": []
+    }
+]

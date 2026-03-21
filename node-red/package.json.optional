@@ -1,0 +1,10 @@
+{
+  "name": "smart-classroom-node-red",
+  "private": true,
+  "scripts": {
+    "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS"
+  },
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "latest"
+  }
+}

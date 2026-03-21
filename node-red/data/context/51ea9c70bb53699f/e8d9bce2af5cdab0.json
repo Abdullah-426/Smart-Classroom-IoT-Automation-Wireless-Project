@@ -1,0 +1,10 @@
+{
+    "wasOccupied": false,
+    "occupiedStart": null,
+    "sessions": [
+        "Occupancy Session 3: 0 min 14 sec",
+        "Occupancy Session 2: 0 min 14 sec",
+        "Occupancy Session 1: 0 min 15 sec"
+    ],
+    "sessionCount": 3
+}

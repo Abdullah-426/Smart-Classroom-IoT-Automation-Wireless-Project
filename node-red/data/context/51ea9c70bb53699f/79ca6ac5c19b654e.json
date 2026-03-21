@@ -1,0 +1,457 @@
+{
+    "model": {
+        "history": [
+            {
+                "t": 1774090393003,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090394761,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090396848,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090398897,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090400979,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090403049,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090405106,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090407364,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090409270,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090411324,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090413405,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090415483,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090417553,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090419646,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090421836,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090423986,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090426151,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090428375,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090430826,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090432939,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090435414,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090437807,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090440395,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090442807,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090445023,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090447319,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090449582,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090451870,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774090454053,
+                "temp": 39.4,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091442314,
+                "temp": 39.4,
+                "occupied": true,
+                "light": 1,
+                "fan": 1
+            },
+            {
+                "t": 1774091444124,
+                "temp": 39.4,
+                "occupied": true,
+                "light": 1,
+                "fan": 1
+            },
+            {
+                "t": 1774091446228,
+                "temp": 39.4,
+                "occupied": true,
+                "light": 1,
+                "fan": 1
+            },
+            {
+                "t": 1774091448220,
+                "temp": 21.9,
+                "occupied": true,
+                "light": 1,
+                "fan": 0
+            },
+            {
+                "t": 1774091450271,
+                "temp": 21.9,
+                "occupied": true,
+                "light": 1,
+                "fan": 0
+            },
+            {
+                "t": 1774091452340,
+                "temp": 34.7,
+                "occupied": true,
+                "light": 1,
+                "fan": 1
+            },
+            {
+                "t": 1774091454398,
+                "temp": 34.7,
+                "occupied": true,
+                "light": 1,
+                "fan": 1
+            },
+            {
+                "t": 1774091456465,
+                "temp": 34.7,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091458541,
+                "temp": 34.7,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091480194,
+                "temp": 34.7,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091462664,
+                "temp": 34.7,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091464733,
+                "temp": 48.5,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091466799,
+                "temp": 48.5,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091468844,
+                "temp": 48.5,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091470910,
+                "temp": 48.5,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091472971,
+                "temp": 60.2,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091475034,
+                "temp": 60.2,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774091477069,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091479116,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091481182,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091483234,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091485307,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091487337,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091489409,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091491478,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091493526,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774091495576,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774092197122,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774092199079,
+                "temp": 20.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 0
+            },
+            {
+                "t": 1774092201154,
+                "temp": 29.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            },
+            {
+                "t": 1774092203326,
+                "temp": 29.9,
+                "occupied": false,
+                "light": 0,
+                "fan": 1
+            }
+        ],
+        "ema": 26.177490498874263,
+        "forecasts": [
+            {
+                "due": 1774092317122,
+                "pred": 20.2
+            }
+        ],
+        "errors": [
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            0.29999999999999716,
+            18.6,
+            12.300000000000004,
+            12.300000000000004,
+            1.5
+        ],
+        "lastAssistAt": 1774091442314,
+        "lastForecastAt": 1774092197122
+    }
+}
